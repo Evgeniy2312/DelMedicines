@@ -1,0 +1,43 @@
+#version: '3.8'
+#
+#services:
+#
+#  SQL_db:
+#    image: mysql
+#    environment:
+#      - MYSQL_ROOT_PASSWORD=rootroot
+#      - MYSQL_DATABASE=myDB
+#
+#  rest_service:
+#    build: .
+#    ports:
+#      - "8080:8081"
+#    depends_on:
+#      - SQL_db
+
+version: '3.8'
+services:
+  db:
+    build:
+      context: mysql
+      dockerfile: Dockerfile
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_USER: betterjavacode
+      MYSQL_PASSWORD: betterjavacode
+      MYSQL_DATABASE: deldrugs2
+      MYSQL_ROOT_PASSWORD: rootroot
+  app:
+    build:
+      context: app
+      dockerfile: Dockerfile
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3307/deldrugs2?serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: betterjavacode
+      SPRING_DATASOURCE_PASSWORD: betterjavacode
+    image: 'my-java-app'
+    ports:
+      - 8081:8081
+    depends_on:
+      - db
