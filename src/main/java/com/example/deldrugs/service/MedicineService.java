@@ -31,17 +31,19 @@ public class MedicineService {
     }
 
     public boolean addMedicines(List<Medicine> medicines, User user){
-        boolean flag = true;
-        for (Medicine medicine: medicines){
-            if (!medicineRepository.existsByNameAndUserAndCategory(medicine.getName(), medicine.getUser(),
-                    medicine.getCategory()) && medicine.getAmount() <= 100) {
+        if(testAddMedicine(medicines)) {
+            for (Medicine medicine : medicines) {
                 medicine.setUser(user);
                 medicineRepository.save(medicine);
-            }else {
-                flag = false;
             }
+            return true;
         }
-        return flag;
+        return false;
+    }
+
+    private  boolean testAddMedicine(List<Medicine> medicines){
+        return medicines.stream().noneMatch(medicine -> medicineRepository.existsByNameAndUserAndCategory(medicine.getName(), medicine.getUser(),
+                medicine.getCategory()) && medicine.getAmount() <= 100);
     }
 
     public boolean updateMedicine(Medicine medicine){
