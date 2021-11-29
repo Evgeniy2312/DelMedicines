@@ -12,7 +12,18 @@ Functions :
   ____
   ___Environment : Spring Boot, Spring Data JPA, MySql, Swagger, AOP, Spring Security, Docker, Hibernate Validator, JSON, Maven, Hibernate ORM, SLF4G.___
   ____
-  ___When I do test to my project I used programm "Postman" for creating api requests.___
+  ___When I did test to my project I used programm "Postman" for creating api requests.___
+    ____
+  ___For exampl:___
+  ___Swagger___
+  ![image](https://user-images.githubusercontent.com/87439829/143940436-e7c219de-9055-4a3b-9192-84930407a713.png)
+   ___Request___
+  ![image](https://user-images.githubusercontent.com/87439829/143940609-15f5768c-84f6-4928-95db-fee77d9088ae.png)
+
+  
+
+ 
+
 
   
 
