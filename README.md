@@ -10,5 +10,5 @@ Functions :
   - changing properties of medicine.
   - registration, authentication
   ____
-  ___Environment : Spring Boot, Spring Data JPA, MySql, Swagger, AOP, Spring Security, Docker, Hibernate Validator, JSON, Maven, Hibernate ORM, SLF4G. ___
+  ___Environment : Spring Boot, Spring Data JPA, MySql, Swagger, AOP, Spring Security, Docker, Hibernate Validator, JSON, Maven, Hibernate ORM, SLF4G.___
 
