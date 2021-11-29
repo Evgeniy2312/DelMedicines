@@ -11,4 +11,8 @@ Functions :
   - registration, authentication
   ____
   ___Environment : Spring Boot, Spring Data JPA, MySql, Swagger, AOP, Spring Security, Docker, Hibernate Validator, JSON, Maven, Hibernate ORM, SLF4G.___
+  ____
+  ___When I do test to my project I used programm "Postman" for creating api requests.___
+
+  
 
